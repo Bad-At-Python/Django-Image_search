@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'image_search/navbar.html' %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Nick's Image Searcher</title>
+</head>
+<body>
+    <p style="font-family: Trebuchet MS; font-size: 75px;">Welcome to Nick's Image Searcher</p>
+
+    <ul>
+        <li> <a href="{% url 'search' %}" style="font-family: Trebuchet MS;">Search for images</a></li>
+        <li> <a href="{% url 'upload' %}" style="font-family: Trebuchet MS;">Upload an image</a></li>
+        <li> <a href="{% url 'add_tag' %}" style="font-family: Trebuchet MS;">Create a tag</a></li>
+    </ul>
+</body>
+</html>
+{% endblock %}

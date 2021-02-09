@@ -1,0 +1,15 @@
+SSH'ing to EC2 Instance:
+
+ssh eo eb (eb ssh)
+cd to venv (cd /var/app/venv/staging-LQM1lest/bin)
+activate venv (. activate)
+run gunicorn commands (python3 gunicorn --arguments)
+
+
+HTTPS (self-signed):
+
+Generate key and cert (openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes)
+Give this IAM user IAMFullAccess temporarily
+Upload key and cert to IAM (aws iam upload-server-certificate --server-certificate-name eb-test-cert --certificate-body file://{CERT_FILE} --private-key file://ssl/{KEY_FILE}})
+Remove IAM user IAMFullAccess permissions
+follow steps listed here: https://aws.amazon.com/premiumsupport/knowledge-center/elastic-beanstalk-https-configuration/

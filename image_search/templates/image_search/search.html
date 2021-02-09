@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'image_search/navbar.html' %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Search</title>
+</head>
+<body>
+    <p style="font-family: Trebuchet MS; font-size:50px">Search for Images</p>
+
+    <form enctype="multipart/form-data" action="{% url 'search_processing' %}" method="post">
+        {% csrf_token %}
+        <select id="tag_select" name="tag_select" multiple>
+            {% for tag in tags %}
+            <option value="{{ tag.name }}" style="font-family: Trebuchet MS;">{{ tag.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Search" style="font-family: Trebuchet MS;">
+    </form>
+</body>
+</html>
+{% endblock %}

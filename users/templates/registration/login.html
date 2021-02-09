@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <p style="font-family: Trebuchet MS; font-size:50px">Login</p>
+    {% if extra_context %}
+    <p style="font-family: Trebuchet MS; color: red;">{{ extra_context }}</p>
+    {% endif %}
+    <form method="POST" style="font-family: Trebuchet MS;">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Login">
+    </form>
+    <p style="font-family: Trebuchet MS;">Dont have an account? Create an account <a href="{% url 'register' %}">here</a></p>
+</body>
+</html>

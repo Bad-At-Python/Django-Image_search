@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <p style="font-family: Trebuchet MS; font-size:50px">Register</p>
+    <form method="POST" style="font-family: Trebuchet MS;">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Create Account">
+    </form>
+    <p style="font-family: Trebuchet MS;">Already have an account? log in <a href="{% url 'login' %}">here</a></p>
+</body>
+</html>

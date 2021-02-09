@@ -1,0 +1,13 @@
+image_search_site/settings.py
+.ebextentions/*
+venv/
+.idea/
+*.sqlite3
+ __pycache__/
+*.pyc
+migrations/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

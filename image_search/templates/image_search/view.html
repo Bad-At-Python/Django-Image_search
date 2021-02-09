@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'image_search/navbar.html' %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for image in images %}
+        <img style="margin:10px;" src="{{ image.s3_url }}" alt="{{ image.name }}" height="240" width="320">
+    {% endfor %}
+</body>
+</html>
+{% endblock %}

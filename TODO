@@ -1,0 +1,6 @@
+(Sorted by priority/importance)
+
+Throw errors for invalid zips
+Use "logged in as" with templates instead of passing extra kwargs
+Use django forms instead of HTML forms?
+Scale images based on original dimensions?

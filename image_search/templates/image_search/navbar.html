@@ -1,0 +1,17 @@
+<html lang="en">
+
+
+<div class="navbar" style="font-family: Trebuchet MS; border-bottom: 5px solid black; padding-bottom: 10px; padding-top: 5px; padding-left: 10px; background-color: LightGray;">
+     <div class="userinfo" style="padding-bottom: 15px;">
+        <span style="font-size:15px;">Logged in as {{username}}|</span>
+        <a href="{% url 'logout' %}" style="font-size: 15px;">Log Out</a>
+    </div>
+
+    <a href="{% url 'search' %}" style="font-size:30px; padding-right: 5px; ">Image Search</a>
+    <a href="{% url 'upload' %}" style="font-size:30px; padding-right: 5px;">Upload Image</a>
+    <a href="{% url 'add_tag' %}" style="font-size:30px; padding-right: 5px;">Add Tag</a>
+
+</div>
+
+{% block content %}
+{% endblock %}
